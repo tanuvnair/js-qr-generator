@@ -45,6 +45,9 @@ function handleQRText(e) {
     }
 }
 
+async function handleShare() {
+}
+
 async function generateQRCode() {
     qrCode.innerHTML = "";
     let file = new QRCode("qrCode", {
@@ -59,11 +62,17 @@ async function generateQRCode() {
 }   
 
 function resolveDataUrl() {
-
-}
-
-function handleShare() {
-    
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const img = document.querySelector("#qrCode img");
+            if(img.currentSrc) {
+                resolve(img.currentSrc);
+                return;
+            }
+            const canvas = document.querySelector("canvas");
+            resolve(canvas.toDataURL());
+        }, 50);
+    });
 }
 
 generateQRCode();
