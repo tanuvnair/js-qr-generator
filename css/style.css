@@ -179,8 +179,15 @@ p {
     margin: 20px;
 }
 
+.action-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .btn {
     font-size: 1.5rem;
+    text-align: center;
     opacity: 0.9;
     border: 1px solid var(--accent-color);
     background-color: transparent;
@@ -188,7 +195,7 @@ p {
     padding: 20px;
     margin: 10px;
     cursor: pointer;
-    width: 25vh;
+    min-width: 15vw;
     transition: all 0.3s ease 0s;
 }
 
