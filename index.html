@@ -29,7 +29,9 @@
 
     <body>
         <main>
-            <section class="qr-generator">
+            <section class="qr-wrapper">
+                <h1 class="title">QR Code Generator</h1>
+
                 <div class="customization-container">
                     <input
                         type="color"
@@ -46,32 +48,35 @@
                         value="#FFFFFF"
                     />
                     <select name="" id="" class="sizes">
-                        <option value="">100x100</option>
-                        <option value="">200x200</option>
-                        <option value="">300x300</option>
-                        <option value="">400x400</option>
-                        <option value="">500x500</option>
-                        <option value="">600x600</option>
-                        <option value="">700x700</option>
-                        <option value="">800x800</option>
-                        <option value="">900x900</option>
-                        <option value="">1000x1000</option>
+                        <option value="100">100x100</option>
+                        <option value="200">200x200</option>
+                        <option value="300">300x300</option>
+                        <option value="400">400x400</option>
+                        <option value="500">500x500</option>
+                        <option value="600">600x600</option>
+                        <option value="700">700x700</option>
+                        <option value="800">800x800</option>
+                        <option value="900">900x900</option>
+                        <option value="1000">1000x1000</option>
                     </select>
                 </div>
 
-                <div class="qr-container">
+                <div class="input-container">
                     <input type="text" class="qr-text" />
+                </div>
+
+                <div class="qr-container">
+                    <h2>Your QR Code is</h2>
                     <div class="qr-code" id="qrCode"></div>
                 </div>
 
                 <div class="action-container">
-                    <button class="download btn">
-                        <a href="#" download="QRcode">Download</a>
-                        <i class="fa-solid fa-download fa-2xl"></i>
-                    </button>
-                    <button class="share btn">
-                        Share <i class="fa-solid fa-share fa-2xl"></i>
-                    </button>
+                    <a href="#" download="" class="download btn"
+                        >Download &nbsp; <i class="fa-solid fa-download fa-2xl"></i
+                    ></a>
+                    <a href="#" class="share btn"
+                        >Share &nbsp; <i class="fa-solid fa-share fa-2xl"></i
+                    ></a>
                 </div>
             </section>
         </main>

@@ -6,19 +6,20 @@ const qrCode = document.querySelector("#qrCode");
 const download = document.querySelector(".download");
 const share = document.querySelector(".share")
 
-primary.addEventListener("input", handlePrimaryColor());
-secondary.addEventListener("input", handleSecondaryColor());
-sizes.addEventListener("change", handleSizes());
-qrText.addEventListener("input", handleQRText());
-share.addEventListener("click", handleShare());
+primary.addEventListener("input", handlePrimaryColor);
+secondary.addEventListener("input", handleSecondaryColor);
+sizes.addEventListener("change", handleSizes);
+qrText.addEventListener("input", handleQRText);
+share.addEventListener("click", handleShare);
 
-const defaultUrl = "https://www.tanuvnair.com",
-    colorPrimary = "#000000",
+const defaultUrl = "https://www.tanuvnair.com";
+let colorPrimary = "#000000",
     colorSecondary = "#ffffff",
     text = defaultUrl,
     size = 100;
 
 function handlePrimaryColor(e) {
+    console.log(e);
     colorPrimary = e.target.value;
     generateQRCode(); 
 }
@@ -30,6 +31,7 @@ function handleSecondaryColor(e) {
 
 function handleSizes(e) {
     size = e.target.value;
+    console.log("Size: " + size);
     generateQRCode();
 }
 
@@ -45,11 +47,23 @@ function handleQRText(e) {
 
 async function generateQRCode() {
     qrCode.innerHTML = "";
-    new generateQRCode("qrCode", {
+    let file = new QRCode("qrCode", {
         text,
-        colorPrimary,
-        colorSecondary,
         height: size,
-        width: size
+        width: size,
+        colorLight: colorPrimary,
+        colorDark: colorSecondary
     });
+
+    download.href = await resolveDataUrl();
+}   
+
+function resolveDataUrl() {
+
 }
+
+function handleShare() {
+    
+}
+
+generateQRCode();
