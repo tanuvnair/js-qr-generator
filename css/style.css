@@ -144,7 +144,7 @@ p {
     transition: all 0.3s ease 0s;
     cursor: pointer;
     border-radius: 4px;
-    padding: 10px;
+    padding: 0px 10px;
 }
 
 .input-container {
