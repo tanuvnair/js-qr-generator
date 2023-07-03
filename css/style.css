@@ -1,0 +1,41 @@
+:root {
+    --primary-color: #628395;
+    --secondary-color: #FFEBCD;
+    --accent-color: #4FA0AD;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Hind', sans-serif;
+    /* font-family: 'Nunito', sans-serif; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p,
+ul,
+li {
+    font-family: 'Hind', sans-serif;
+}
+
+.qr-generator {
+    display: grid;
+}

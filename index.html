@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+        <title>QR Code Generator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <script
+            src="https://kit.fontawesome.com/8b835e0cdc.js"
+            crossorigin="anonymous"
+            defer
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js"
+            integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+            defer
+        ></script>
+        <script src="js/index.js" defer></script>
+    </head>
+
+    <body>
+        <main>
+            <section class="qr-generator">
+                <div class="customization-container">
+                    <input
+                        type="color"
+                        name=""
+                        id=""
+                        class="primary-color"
+                        value="#000000"
+                    />
+                    <input
+                        type="color"
+                        name=""
+                        id=""
+                        class="secondary-color"
+                        value="#FFFFFF"
+                    />
+                    <select name="" id="" class="sizes">
+                        <option value="">100x100</option>
+                        <option value="">200x200</option>
+                        <option value="">300x300</option>
+                        <option value="">400x400</option>
+                        <option value="">500x500</option>
+                        <option value="">600x600</option>
+                        <option value="">700x700</option>
+                        <option value="">800x800</option>
+                        <option value="">900x900</option>
+                        <option value="">1000x1000</option>
+                    </select>
+                </div>
+
+                <div class="qr-container">
+                    <input type="text" class="qr-text" />
+                    <div class="qr-code" id="qrCode"></div>
+                </div>
+
+                <div class="action-container">
+                    <button class="download btn">
+                        <a href="#" download="QRcode">Download</a>
+                        <i class="fa-solid fa-download fa-2xl"></i>
+                    </button>
+                    <button class="share btn">
+                        Share <i class="fa-solid fa-share fa-2xl"></i>
+                    </button>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
