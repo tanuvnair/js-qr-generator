@@ -1,25 +1,9 @@
-/* :root {
-    --primary-color: #042525;
-    --secondary-color: #E4F1E9;
-    --accent-color: #16CACA;
-} */
-
-/* :root {
-    --primary-color: #15281C;
-    --secondary-color: #EDFDFD;
-    --accent-color: #6CB286;
-} */
-
-/* :root {
-    --primary-color: #3A1918;
-    --secondary-color: #F9F1F1;
-    --accent-color: #C9807E;
-} */
-
 :root {
-    --primary-color: #171219;
-    --secondary-color: #F6F3F6;
-    --accent-color: #8D7198;
+    --text: rgb(250, 247, 253);
+    --background: rgb(8, 4, 12);
+    --primary: rgb(182, 130, 217);
+    --secondary: rgb(37, 16, 51);
+    --accent: rgb(148, 72, 199);
 }
 
 * {
@@ -36,7 +20,7 @@ html {
 }
 
 body {
-    background-color: var(--primary-color);
+    background-color: var(--background);
     font-family: "Hind", sans-serif;
     height: 100vh;
 }
@@ -84,11 +68,11 @@ p {
 }
 
 .title h1 {
-    color: var(--accent-color);
+    color: var(--accent);
 }
 
 .title p {
-    color: var(--secondary-color);
+    color: var(--text);
 }
 
 .qr-wrapper {
@@ -119,7 +103,7 @@ p {
 }
 
 .customization-container input[type="color"]:hover {
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--accent);
 }
 
 .customization-container input[type="color"]::-webkit-color-swatch-wrapper {
@@ -138,8 +122,8 @@ p {
 
 .sizes {
     flex: 2;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--secondary);
+    color: var(--text);
     border: none;
     transition: all 0.3s ease 0s;
     cursor: pointer;
@@ -158,8 +142,8 @@ p {
     height: 50px;
     padding: 15px;
     border: none;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--secondary);
+    color: var(--text);
     transition: all 0.3s ease 0s;
     border-radius: 4px;
 }
@@ -167,11 +151,11 @@ p {
 .qr-container {
     margin: 50px 0px 50px;
     text-align: center;
-    color: var(--accent-color);
+    color: var(--primary);
 }
 
 .qr-code {
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--primary);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -189,9 +173,9 @@ p {
     font-size: 1.5rem;
     text-align: center;
     opacity: 0.9;
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--accent);
     background-color: transparent;
-    color: var(--secondary-color);
+    color: var(--text);
     padding: 20px;
     margin: 10px;
     cursor: pointer;
@@ -200,7 +184,7 @@ p {
 }
 
 .btn:hover {
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
+    background-color: var(--accent);
+    color: var(--text);
     opacity: 1;
 }
