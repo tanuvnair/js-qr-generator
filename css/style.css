@@ -1,9 +1,17 @@
-:root {
+/* :root {
     --text: rgb(250, 247, 253);
     --background: rgb(8, 4, 12);
     --primary: rgb(182, 130, 217);
     --secondary: rgb(37, 16, 51);
     --accent: rgb(148, 72, 199);
+} */
+
+:root {
+    --text: rgb(248, 251, 252);
+    --background: rgb(6, 12, 14);
+    --primary: rgb(40, 79, 92);
+    --secondary: rgb(12, 24, 28);
+    --accent: rgb(75, 146, 170);
 }
 
 * {
